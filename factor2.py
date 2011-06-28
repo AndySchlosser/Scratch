@@ -1,4 +1,4 @@
-def function(x):
+def primefactor(x):
 	factors = []
 	loop = 2
 	while loop <= x:
