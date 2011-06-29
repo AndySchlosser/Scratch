@@ -1,15 +1,12 @@
-def sort(list=[]):
+def sort(list):
 	if len(list) <= 1:
 		return list
-	else:
-		pass
 	smallerList = []
 	largerList = []
 	pivot = list[0]
-	for c in xrange(len(list) + 1):
+	for c in range(1, len(list)):#en(list)):
 		if list[c] <= pivot:
-			smallerList += list[c]
+			smallerList.append(list[c])
 		else:
-			largerList += list[c]
-	list = largerList + smallerList
-	return list
+			largerList.append(list[c])
+	return (sort(smallerList) + [pivot] + sort(largerList)) 
